@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+}
+main {
+  height:100vh;
+}
+.background-sky {
+  height: 70%;
+  background: linear-gradient(to bottom, #80d4ff ,#b3e6ff ,#cceeff ,#e6f7ff );
+  position: relative;
+}
+.background-ground {
+  height: 30%;
+  background: url(img/ground.png)
+}
+.mario {
+  position: absolute;
+  left: 5px;
+  bottom: 0;
+  height: 30%;
+  width: auto;
+  animation: move 5s linear;
+  -webkit-animation: move 5s forwards;
+}
+@keyframes move {
+  from {left: 5px;}
+  to {left: 60%;}
+}
+@-webkit-keyframes move {
+  from {left: 5px;}
+  to {left: 60%;}
+}
+.castle {
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+  height: 70%;
+  width: auto;
+}
+@media (max-width: 1030px) {
+  .mario {
+    height: 20%;
+  }
+  .castle {
+    height: 60%;
+  }
+}
+
+@media (max-width: 812px) {
+  .mario {
+    height: 15%;
+  }
+  .castle {
+    height: 55%;
+  }
+}
+@media (max-width: 425px) {
+  .mario {
+    height: 5%;
+  }
+  .castle {
+    height: 25%;
+  }
+}
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1){
+  .mario {
+    height: 10%;
+  }
+  .castle {
+    height: 35%;
+  }
+}
+@media only screen
+and (min-width : 1024px)
+and (max-width : 1366px)
+and (-webkit-min-device-pixel-ratio: 1){
+  .mario {
+    height: 10%;
+  }
+  .castle {
+    height: 35%;
+  }
+}
